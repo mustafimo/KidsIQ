@@ -1,72 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorPrimaryDark"
-    android:gravity="center"
     android:layout_height="match_parent"
+    android:background="@drawable/download"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:src="@drawable/ic_launcher_foreground"
+
+    <Button
+        android:id="@+id/true_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/true_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <Button
+        android:id="@+id/false_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/false_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <ImageButton
+        android:id="@+id/prev_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"
+        android:scaleType="center"
+        android:src="@drawable/baseline_navigate_before_white_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <ImageButton
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/next_text"
+        android:src="@drawable/baseline_navigate_next_white_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
     <TextView
         android:id="@+id/answer_text_view"
-        android:text="@string/question_declaration"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:padding="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginTop="34dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/true_button"
-            android:text="@string/true_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/false_button"
-            android:text="@string/false_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:layout_width="352dp"
+        android:layout_height="76dp"
+        android:text="@string/question_1"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
 
 
-    </LinearLayout>
-
-   <LinearLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content">
-
-
-       <ImageButton
-           android:id="@+id/prev_button"
-           android:src="@drawable/baseline_navigate_before_white_18dp"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" />
-       <ImageButton
-           android:contentDescription="@string/next_text"
-           android:id="@+id/next_button"
-           android:src="@drawable/baseline_navigate_next_white_18dp"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" />
-
-
-
-   </LinearLayout>
-
-
-
-
-
-
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
